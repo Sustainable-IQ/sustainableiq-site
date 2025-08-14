@@ -6,17 +6,6 @@
   <title>Sustainable IQ — Systems, Strategy, and Sacred Integrity</title>
   <meta name="description" content="Sustainable IQ builds coherent systems and strategy with integrity. Consulting, architecture, and pattern design for organizations in transition." />
 
-<!-- WARNING JUST ADDED THIs -->
-  <meta property="og:type
-<nav class="menu">
-  <a href="#services">Services</a>
-  <a href="#vision">Vision</a>
-  <a href="#booking">Book</a>
-  <a href="#contact">Contact</a>
-  <a href="blog/">Blog</a>
-</nav>
-
-
   <!-- Social Cards -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sustainable IQ — Systems, Strategy, and Sacred Integrity">
@@ -36,18 +25,18 @@
   <style>
     :root{
       /* Earth palette — Dark Theme */
-      --deep-blue: #081a2b;   /* ocean midnight */
-      --deep-blue-2:#0b2a4a;  /* accent */
-      --sky:       #bfe7fb;   /* light sky on dark */
-      --earth:     #b7895f;   /* warm soil accent */
-      --forest:    #0c2c22;   /* deep forest */
-      --leaf:      #c9f0de;   /* light green */
-      --sun:       #ffd86b;   /* link/cta yellow */
+      --deep-blue: #081a2b;
+      --deep-blue-2:#0b2a4a;
+      --sky:       #bfe7fb;
+      --earth:     #b7895f;
+      --forest:    #0c2c22;
+      --leaf:      #c9f0de;
+      --sun:       #ffd86b;
 
-      --text: #eef5f8;        /* body text */
-      --muted: #b9c6cf;       /* secondary text */
-      --bg: #07131f;          /* page bg */
-      --panel: #0c1c2a;       /* card bg */
+      --text: #eef5f8;
+      --muted: #b9c6cf;
+      --bg: #07131f;
+      --panel: #0c1c2a;
       --line: rgba(191,231,251,.18);
 
       --scale: clamp(1rem, 0.95rem + 0.6vw, 1.12rem);
@@ -94,7 +83,7 @@
     .button.primary:hover{filter:saturate(110%)}
     .button.secondary{background:transparent; color:var(--sky); border:1px dashed rgba(191,231,251,.5)}
 
-    /* Hero — dark gradient with organic glow */
+    /* Hero */
     .hero{padding-block:clamp(3rem,6vw,6rem);background:radial-gradient(1200px 500px at 8% -10%, rgba(191,231,251,.10), transparent),radial-gradient(900px 380px at 85% 10%, rgba(201,240,222,.07), transparent),linear-gradient(180deg, var(--deep-blue) 0%, var(--forest) 100%);border-bottom:1px solid var(--line)}
 
     .card{border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;background:linear-gradient(180deg, rgba(12,28,42,.85), rgba(12,34,50,.85));box-shadow:var(--shadow)}
@@ -113,10 +102,12 @@
     <div class="wrap nav">
       <div class="brand">Sustainable IQ</div>
       <nav class="menu">
+        <a href="/">Home</a>
         <a href="#services">Services</a>
         <a href="#vision">Vision</a>
         <a href="#booking">Book</a>
         <a href="#contact">Contact</a>
+        <a href="blog/">Blog</a>
       </nav>
     </div>
   </header>
@@ -182,7 +173,7 @@
       </div>
     </section>
 
-    <!-- Booking (Cal.com embed) -->
+    <!-- Booking -->
     <section id="booking" class="section">
       <div class="wrap">
         <h2>Book a Conversation</h2>
@@ -192,13 +183,12 @@
       <script src="https://cal.com/embed.js" async></script>
       <script>
         window.addEventListener("load",function(){
-          // TODO: Replace with your real Cal.com handle, e.g., "sustainableiq/intro"
           Cal("inline", { elementOrSelector: "#cal-inline", calLink: "your-handle/intro" });
         });
       </script>
     </section>
 
-    <!-- Contact form (Formspree) -->
+    <!-- Contact -->
     <section id="contact" class="section" style="background:linear-gradient(180deg, rgba(12,44,34,.18), rgba(8,26,43,1))">
       <div class="wrap">
         <h2>Contact</h2>
@@ -230,6 +220,3 @@
   </footer>
 </body>
 </html>
-git add .
-git commit -m "Add dark Earth palette theme and improved layout"
-git push origin main
