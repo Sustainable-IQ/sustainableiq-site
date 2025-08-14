@@ -3,217 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sustainable IQ — Systems, Strategy, and Sacred Integrity</title>
-  <meta name="description" content="Sustainable IQ builds coherent systems and strategy with integrity. Consulting, architecture, and pattern design for organizations in transition." />
+  <title>First Blog post — Sustainable IQ</title>
+  <meta name="description" content="hello" />
 
-  <!-- Social Cards -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Sustainable IQ — Systems, Strategy, and Sacred Integrity">
-  <meta property="og:description" content="Coherent systems for organizations in transition.">
-  <meta property="og:image" content="/assets/og.jpg">
-  <meta property="og:site_name" content="Sustainable IQ">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sustainable IQ — Systems, Strategy, and Sacred Integrity">
-  <meta name="twitter:description" content="Coherent systems for organizations in transition.">
-  <meta name="twitter:image" content="/assets/og.jpg">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      /* Earth palette — Dark Theme */
-      --deep-blue: #081a2b;
-      --deep-blue-2:#0b2a4a;
-      --sky:       #bfe7fb;
-      --earth:     #b7895f;
-      --forest:    #0c2c22;
-      --leaf:      #c9f0de;
-      --sun:       #ffd86b;
-
-      --text: #eef5f8;
-      --muted: #b9c6cf;
-      --bg: #07131f;
-      --panel: #0c1c2a;
-      --line: rgba(191,231,251,.18);
-
-      --scale: clamp(1rem, 0.95rem + 0.6vw, 1.12rem);
-      --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      --font-head: "Libre Baskerville", Georgia, "Times New Roman", serif;
-      --lh: 1.65;
-      --space-1: .375rem; --space-2: .75rem; --space-3: 1.25rem; --space-4: 2rem; --space-5: 3.25rem;
-      --radius: 16px;
-      --maxw: 72rem;
-      --shadow: 0 24px 60px rgba(0,0,0,.35), 0 6px 20px rgba(0,0,0,.25);
+      --deep-blue:#081a2b; --deep-blue-2:#0b2a4a; --sky:#bfe7fb; --earth:#b7895f; --forest:#0c2c22;
+      --leaf:#c9f0de; --sun:#ffd86b; --text:#eef5f8; --muted:#b9c6cf; --bg:#07131f;
+      --panel:#0c1c2a; --line:rgba(191,231,251,.18);
+      --scale:clamp(1rem,0.95rem + 0.6vw,1.12rem);
+      --font-body:"Inter",ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      --font-head:"Libre Baskerville",Georgia,"Times New Roman",serif;
+      --lh:1.65; --space-1:.375rem; --space-2:.75rem; --space-3:1.25rem; --space-4:2rem; --space-5:3.25rem;
+      --radius:16px; --maxw:72rem; --shadow:0 24px 60px rgba(0,0,0,.35),0 6px 20px rgba(0,0,0,.25);
     }
-
     html{font-size:100%}
     body{font:400 var(--scale)/var(--lh) var(--font-body);color:var(--text);background:var(--bg);margin:0}
-
-    a{color:var(--sun); text-underline-offset: 3px}
-    a:hover{filter:saturate(115%)}
-
+    a{color:var(--sun); text-underline-offset:3px} a:hover{filter:saturate(115%)}
     .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem)}
-
     header{position:sticky;top:0;background:rgba(7,19,31,.75);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--line);z-index:50}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.75rem}
     .brand{font-family:var(--font-head);font-weight:700;letter-spacing:.3px;color:var(--sky)}
     .menu{display:flex;gap:1rem;flex-wrap:wrap}
     .menu a{padding:.4rem .6rem;text-decoration:none;border-radius:.6rem;color:var(--sky)}
     .menu a:hover{background:rgba(191,231,251,.08)}
-
     h1,h2,h3{font-family:var(--font-head);line-height:1.18;margin:var(--space-4) 0 var(--space-2);color:#eaf4ff}
-    h1{font-size:clamp(2.35rem, 1.6rem + 3.2vw, 3.4rem)}
-    h2{font-size:clamp(1.75rem, 1.2rem + 2vw, 2.35rem)}
-    h3{font-size:clamp(1.25rem, .95rem + 1.2vw, 1.55rem)}
-    p,li{margin:0 0 var(--space-2)}
-    .muted{color:var(--muted)}
-
+    h1{font-size:clamp(2.1rem,1.3rem + 2.6vw,3rem)}
+    p,li{margin:0 0 var(--space-2)} .muted{color:var(--muted)}
     .section{padding-block:clamp(2rem,4vw,4rem)}
-    .grid{display:grid;gap:clamp(1rem,2.5vw,2rem)}
-    .grid-2{grid-template-columns:1fr}
-    @media (min-width:760px){.grid-2{grid-template-columns:1fr 1fr}}
-
-    /* Buttons */
-    .button{display:inline-block;padding:.9rem 1.15rem;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.25);transition:transform .08s ease, background .18s ease, color .18s ease, box-shadow .18s ease; box-shadow:0 2px 0 rgba(255,255,255,.07) inset}
-    .button:hover{transform:translateY(-1px)}
-    .button.primary{background:var(--sun); border-color:var(--sun); color:#1b1402; box-shadow:0 12px 30px rgba(255,216,107,.25)}
-    .button.primary:hover{filter:saturate(110%)}
-    .button.secondary{background:transparent; color:var(--sky); border:1px dashed rgba(191,231,251,.5)}
-
-    /* Hero */
-    .hero{padding-block:clamp(3rem,6vw,6rem);background:radial-gradient(1200px 500px at 8% -10%, rgba(191,231,251,.10), transparent),radial-gradient(900px 380px at 85% 10%, rgba(201,240,222,.07), transparent),linear-gradient(180deg, var(--deep-blue) 0%, var(--forest) 100%);border-bottom:1px solid var(--line)}
-
-    .card{border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;background:linear-gradient(180deg, rgba(12,28,42,.85), rgba(12,34,50,.85));box-shadow:var(--shadow)}
-    footer{border-top:1px solid var(--line);padding-block:2rem;background:linear-gradient(180deg, #08131f, #0a1a28)}
-
+    footer{border-top:1px solid var(--line);padding-block:2rem;background:linear-gradient(180deg,#08131f,#0a1a28)}
     .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.85em;color:var(--earth)}
-    .kicker{color:var(--earth)}
-    .highlight{background:linear-gradient(transparent 70%, rgba(201,240,222,.28) 0)}
-    .card ul{margin:0; padding-left:1.2rem}
-    .card li{margin:.5rem 0}
     :focus-visible{outline:3px solid var(--sky); outline-offset:2px; border-radius:8px}
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <div class="brand">Sustainable IQ</div>
+      <div class="brand"><a href="../../" style="text-decoration:none;color:inherit">Sustainable IQ</a></div>
       <nav class="menu">
-        <a href="/">Home</a>
-        <a href="#services">Services</a>
-        <a href="#vision">Vision</a>
-        <a href="#booking">Book</a>
-        <a href="#contact">Contact</a>
-        <a href="blog/">Blog</a>
+        <a href="../../">Home</a>
+        <a href="../../#services">Services</a>
+        <a href="../../#vision">Vision</a>
+        <a href="../../#booking">Book</a>
+        <a href="../../#contact">Contact</a>
+        <a href="../">Blog</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="wrap grid grid-2" style="align-items:center">
-        <div>
-          <div class="eyebrow">Systems • Strategy • Integrity</div>
-          <h1>Coherent systems for organizations in transition</h1>
-          <p class="muted">We build living architectures that align operations, technology, and culture. Less noise, more signal, honest execution.</p>
-          <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap">
-            <a class="button primary" href="#booking">Book a conversation</a>
-            <a class="button secondary" href="#services">Explore services</a>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <h3>What we do</h3>
-            <ul>
-              <li>Systems architecture & strategic roadmaps</li>
-              <li>AI readiness & ethical integration</li>
-              <li>Operating model & process design</li>
-              <li>Pattern audits, governance, and rollout</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="section">
+    <article class="section">
       <div class="wrap">
-        <h2>Services</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>Systems Architecture</h3>
-            <p>Design coherent systems that reduce friction, clarify roles, and make execution measurable and humane.</p>
-          </div>
-          <div class="card">
-            <h3>AI Integration</h3>
-            <p>From workflow pilots to governance and ethics, we bring AI into your org without breaking trust or pattern integrity.</p>
-          </div>
-          <div class="card">
-            <h3>Operating Models</h3>
-            <p>Rewrite how teams work across functions with clear cadences, feedback loops, and transparent decision paths.</p>
-          </div>
-          <div class="card">
-            <h3>Advisory & Facilitation</h3>
-            <p>Executive guidance, strategy sprints, and facilitation that turns paralysis into action.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <p class="eyebrow">Blog</p>
+        <h1>First Blog post</h1>
+        <p class="muted"><time datetime="2025-08-13">August 13, 2025</time></p>
 
-    <!-- Vision -->
-    <section id="vision" class="section" style="background:linear-gradient(180deg, rgba(191,231,251,.06), rgba(12,44,34,.18))">
-      <div class="wrap">
-        <h2>Vision</h2>
-        <p>Integrity is not a slogan, it is structure. We align infrastructure with intention so your systems stop fighting your mission.</p>
-        <p>We honor pattern integrity and living resonance. That means we build for clarity, accountability, and humane pace.</p>
-      </div>
-    </section>
+        <p>hello</p>
 
-    <!-- Booking -->
-    <section id="booking" class="section">
-      <div class="wrap">
-        <h2>Book a Conversation</h2>
-        <p class="muted">Pick a time that works. You’ll receive a calendar invite with a meeting link automatically.</p>
-        <div id="cal-inline"></div>
+        <p style="margin-top:1.5rem"><a href="../">← Back to Blog</a></p>
       </div>
-      <script src="https://cal.com/embed.js" async></script>
-      <script>
-        window.addEventListener("load",function(){
-          Cal("inline", { elementOrSelector: "#cal-inline", calLink: "your-handle/intro" });
-        });
-      </script>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section" style="background:linear-gradient(180deg, rgba(12,44,34,.18), rgba(8,26,43,1))">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="grid">
-          <label> Name
-            <input type="text" name="name" required style="width:100%;padding:.65rem;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:.5rem">
-          </label>
-          <label> Email
-            <input type="email" name="email" required style="width:100%;padding:.65rem;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:.5rem">
-          </label>
-          <label class="grid-2" style="grid-column:1/-1"> Message
-            <textarea name="message" rows="6" required style="width:100%;padding:.65rem;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:.5rem"></textarea>
-          </label>
-          <button class="button primary" type="submit">Send</button>
-        </form>
-      </div>
-    </section>
+    </article>
   </main>
 
   <footer>
     <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem">
-      <div>
-        <strong>Sustainable IQ</strong>
-        <div class="muted">Systems, Strategy, and Sacred Integrity</div>
-      </div>
+      <div><strong>Sustainable IQ</strong></div>
       <div class="muted">© <span id="y"></span> Sustainable IQ</div>
     </div>
     <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
