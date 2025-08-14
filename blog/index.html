@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sustainable IQ — Blog</title>
+  <meta name="description" content="Writings from Sustainable IQ: systems, strategy, and sacred integrity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Copy the SAME <style> block from your home page into here to keep the dark Earth theme -->
+  <style>
+    /* paste your exact <style> from the homepage here */
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand"><a href="../" style="text-decoration:none;color:inherit">Sustainable IQ</a></div>
+      <nav class="menu">
+        <a href="../#services">Services</a>
+        <a href="../#vision">Vision</a>
+        <a href="../#booking">Book</a>
+        <a href="../#contact">Contact</a>
+        <a href="./">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <h1>Blog</h1>
+        <p class="muted">Notes and transmissions from the work.</p>
+
+        <div id="posts" class="grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+      <div><strong>Sustainable IQ</strong></div>
+      <div class="muted">© <span id="y"></span> Sustainable IQ</div>
+    </div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+  <script>
+    // Fetch the manifest and render post cards
+    fetch('posts.json')
+      .then(r => r.json())
+      .then(list => {
+        const container = document.getElementById('posts');
+        if (!Array.isArray(list) || !list.length) {
+          container.innerHTML = '<p class="muted">No posts yet.</p>';
+          return;
+        }
+        // newest first (optional)
+        list.sort((a,b) => (b.date||'').localeCompare(a.date||''));
+
+        for (const post of list) {
+          const url = `${post.slug}/`;
+          const card = document.createElement('article');
+          card.className = 'card';
+          card.innerHTML = `
+            <h3><a href="${url}">${post.title || post.slug}</a></h3>
+            <p class="muted">${post.excerpt ? post.excerpt : ''}</p>
+            ${post.date ? `<p class="muted">Published: <time datetime="${post.date}">${new Date(post.date).toLocaleDateString()}</time></p>` : ''}
+          `;
+          container.appendChild(card);
+        }
+      })
+      .catch(() => {
+        document.getElementById('posts').innerHTML = '<p class="muted">Unable to load posts.</p>';
+      });
+  </script>
+</body>
+</html>
