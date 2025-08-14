@@ -4,70 +4,54 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sustainable IQ — Systems, Strategy, and Sacred Integrity</title>
-  <meta name="description" content="Sustainable IQ builds coherent systems and strategy with integrity. Consulting, architecture, and pattern design for organizations in transition." />
-
-  <!-- Social Cards -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Sustainable IQ — Systems, Strategy, and Sacred Integrity">
-  <meta property="og:description" content="Coherent systems for organizations in transition.">
-  <meta property="og:image" content="/assets/og.jpg">
-  <meta property="og:site_name" content="Sustainable IQ">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sustainable IQ — Systems, Strategy, and Sacred Integrity">
-  <meta name="twitter:description" content="Coherent systems for organizations in transition.">
-  <meta name="twitter:image" content="/assets/og.jpg">
-
-  <!-- Fonts -->
+  <meta name="description" content="Sustainable IQ builds coherent systems and strategy with integrity. Consulting, architecture, and sacred pattern design for organizations in transition." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     :root{
-      /* Earth palette — Dark Theme */
-      --deep-blue: #081a2b;   /* ocean midnight */
-      --deep-blue-2:#0b2a4a;  /* accent */
-      --sky:       #bfe7fb;   /* light sky on dark */
-      --earth:     #b7895f;   /* warm soil accent */
-      --forest:    #0c2c22;   /* deep forest */
-      --leaf:      #c9f0de;   /* light green */
-      --sun:       #ffd86b;   /* link/cta yellow */
+      /* Earth palette */
+      --deep-blue: #0b2a4a;   /* ocean midnight */
+      --sky:       #a7d8f0;   /* light sky blue */
+      --earth:     #8b5e3c;   /* soil brown */
+      --forest:    #0f3b2e;   /* deep green */
+      --leaf:      #b7e4c7;   /* light green */
+      --sun:       #f2c94c;   /* link yellow */
 
-      --text: #eef5f8;        /* body text */
-      --muted: #b9c6cf;       /* secondary text */
-      --bg: #07131f;          /* page bg */
-      --panel: #0c1c2a;       /* card bg */
-      --line: rgba(191,231,251,.18);
+      --text: #0e1a1a;        /* body text */
+      --muted: #4b5757;       /* secondary text */
+      --bg: #ffffff;          /* page bg */
+      --panel: #f7fafb;       /* soft panels */
+      --line: #e3ecee;        /* dividers */
 
-      --scale: clamp(1rem, 0.95rem + 0.6vw, 1.12rem);
+      --scale: clamp(1rem, 0.95rem + 0.6vw, 1.125rem);
       --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       --font-head: "Libre Baskerville", Georgia, "Times New Roman", serif;
-      --lh: 1.65;
-      --space-1: .375rem; --space-2: .75rem; --space-3: 1.25rem; --space-4: 2rem; --space-5: 3.25rem;
+      --lh: 1.6;
+      --space-1: 0.375rem; --space-2: 0.75rem; --space-3: 1.25rem; --space-4: 2rem; --space-5: 3.25rem;
       --radius: 16px;
       --maxw: 72rem;
-      --shadow: 0 24px 60px rgba(0,0,0,.35), 0 6px 20px rgba(0,0,0,.25);
+      --shadow: 0 10px 30px rgba(11,42,74,.06), 0 2px 8px rgba(11,42,74,.05);
     }
 
     html{font-size:100%}
     body{font:400 var(--scale)/var(--lh) var(--font-body);color:var(--text);background:var(--bg);margin:0}
-
-    a{color:var(--sun); text-underline-offset: 3px}
-    a:hover{filter:saturate(115%)}
+    a{color:var(--sun); text-underline-offset: 3px;}
+    a:hover{filter: saturate(120%);}
 
     .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1rem,3vw,2rem)}
 
-    header{position:sticky;top:0;background:rgba(7,19,31,.75);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--line);z-index:50}
+    header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--line);z-index:50}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.75rem}
-    .brand{font-family:var(--font-head);font-weight:700;letter-spacing:.3px;color:var(--sky)}
+    .brand{font-family:var(--font-head);font-weight:700;letter-spacing:.3px;color:var(--deep-blue)}
     .menu{display:flex;gap:1rem;flex-wrap:wrap}
-    .menu a{padding:.4rem .6rem;text-decoration:none;border-radius:.6rem;color:var(--sky)}
-    .menu a:hover{background:rgba(191,231,251,.08)}
+    .menu a{padding:.4rem .6rem;text-decoration:none;border-radius:.6rem;color:var(--deep-blue)}
+    .menu a:hover{background:rgba(167,216,240,.25)}
 
-    h1,h2,h3{font-family:var(--font-head);line-height:1.18;margin:var(--space-4) 0 var(--space-2);color:#eaf4ff}
-    h1{font-size:clamp(2.35rem, 1.6rem + 3.2vw, 3.4rem)}
-    h2{font-size:clamp(1.75rem, 1.2rem + 2vw, 2.35rem)}
-    h3{font-size:clamp(1.25rem, .95rem + 1.2vw, 1.55rem)}
+    h1,h2,h3{font-family:var(--font-head);line-height:1.18;margin:var(--space-4) 0 var(--space-2);color:var(--deep-blue)}
+    h1{font-size:clamp(2.25rem, 1.4rem + 3.2vw, 3.25rem)}
+    h2{font-size:clamp(1.65rem, 1.1rem + 2vw, 2.25rem)}
+    h3{font-size:clamp(1.25rem, 0.95rem + 1.2vw, 1.5rem)}
     p,li{margin:0 0 var(--space-2)}
     .muted{color:var(--muted)}
 
@@ -76,24 +60,26 @@
     .grid-2{grid-template-columns:1fr}
     @media (min-width:760px){.grid-2{grid-template-columns:1fr 1fr}}
 
-    /* Buttons */
-    .button{display:inline-block;padding:.9rem 1.15rem;border-radius:14px;text-decoration:none;border:1px solid rgba(255,255,255,.25);transition:transform .08s ease, background .18s ease, color .18s ease, box-shadow .18s ease; box-shadow:0 2px 0 rgba(255,255,255,.07) inset}
+    .button{display:inline-block;padding:.85rem 1.1rem;border-radius:12px;text-decoration:none;border:1px solid var(--deep-blue);transition:transform .06s ease, background .15s ease, color .15s ease}
     .button:hover{transform:translateY(-1px)}
-    .button.primary{background:var(--sun); border-color:var(--sun); color:#1b1402; box-shadow:0 12px 30px rgba(255,216,107,.25)}
-    .button.primary:hover{filter:saturate(110%)}
-    .button.secondary{background:transparent; color:var(--sky); border:1px dashed rgba(191,231,251,.5)}
+    .button.primary{background:var(--forest); border-color:var(--forest); color:#fff}
+    .button.primary:hover{background:#0b2f24}
+    .button.secondary{background:transparent; color:var(--deep-blue); border-style:dashed}
 
-    /* Hero — dark gradient with organic glow */
-    .hero{padding-block:clamp(3rem,6vw,6rem);background:radial-gradient(1200px 500px at 8% -10%, rgba(191,231,251,.10), transparent),radial-gradient(900px 380px at 85% 10%, rgba(201,240,222,.07), transparent),linear-gradient(180deg, var(--deep-blue) 0%, var(--forest) 100%);border-bottom:1px solid var(--line)}
-
-    .card{border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;background:linear-gradient(180deg, rgba(12,28,42,.85), rgba(12,34,50,.85));box-shadow:var(--shadow)}
-    footer{border-top:1px solid var(--line);padding-block:2rem;background:linear-gradient(180deg, #08131f, #0a1a28)}
-
+    .hero{padding-block:clamp(3rem,6vw,6rem); background: radial-gradient(1200px 500px at 15% -10%, rgba(167,216,240,.55), transparent), linear-gradient(180deg,#fbfeff, #ffffff)}
+    .card{border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;background:var(--panel);box-shadow:var(--shadow)}
+    footer{border-top:1px solid var(--line);padding-block:2rem;background:linear-gradient(0deg,#f8fbfc, #ffffff)}
     .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:.85em;color:var(--earth)}
+
+    /* Accents using earth & leaf */
     .kicker{color:var(--earth)}
-    .highlight{background:linear-gradient(transparent 70%, rgba(201,240,222,.28) 0)}
+    .highlight{background:linear-gradient(transparent 70%, rgba(183,228,199,.7) 0)}
+
+    /* Better list spacing inside cards */
     .card ul{margin:0; padding-left:1.2rem}
     .card li{margin:.5rem 0}
+
+    /* Focus styles for accessibility */
     :focus-visible{outline:3px solid var(--sky); outline-offset:2px; border-radius:8px}
   </style>
 </head>
@@ -119,8 +105,8 @@
           <h1>Coherent systems for organizations in transition</h1>
           <p class="muted">We build living architectures that align operations, technology, and culture. Less noise, more signal, honest execution.</p>
           <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap">
-            <a class="button primary" href="#booking">Book a conversation</a>
-            <a class="button secondary" href="#services">Explore services</a>
+            <a class="button" href="#booking">Book a conversation</a>
+            <a class="button" href="#services" style="border-style:dashed">Explore services</a>
           </div>
         </div>
         <div>
@@ -163,7 +149,7 @@
     </section>
 
     <!-- Vision -->
-    <section id="vision" class="section" style="background:linear-gradient(180deg, rgba(191,231,251,.06), rgba(12,44,34,.18))">
+    <section id="vision" class="section" style="background:#fbfbfb">
       <div class="wrap">
         <h2>Vision</h2>
         <p>Integrity is not a slogan, it is structure. We align infrastructure with intention so your systems stop fighting your mission.</p>
@@ -188,20 +174,20 @@
     </section>
 
     <!-- Contact form (Formspree) -->
-    <section id="contact" class="section" style="background:linear-gradient(180deg, rgba(12,44,34,.18), rgba(8,26,43,1))">
+    <section id="contact" class="section" style="background:#fbfbfb">
       <div class="wrap">
         <h2>Contact</h2>
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="grid">
           <label> Name
-            <input type="text" name="name" required style="width:100%;padding:.65rem;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:.5rem">
+            <input type="text" name="name" required style="width:100%;padding:.65rem;border:1px solid #ddd;border-radius:.5rem">
           </label>
           <label> Email
-            <input type="email" name="email" required style="width:100%;padding:.65rem;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:.5rem">
+            <input type="email" name="email" required style="width:100%;padding:.65rem;border:1px solid #ddd;border-radius:.5rem">
           </label>
           <label class="grid-2" style="grid-column:1/-1"> Message
-            <textarea name="message" rows="6" required style="width:100%;padding:.65rem;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:.5rem"></textarea>
+            <textarea name="message" rows="6" required style="width:100%;padding:.65rem;border:1px solid #ddd;border-radius:.5rem"></textarea>
           </label>
-          <button class="button primary" type="submit">Send</button>
+          <button class="button" type="submit">Send</button>
         </form>
       </div>
     </section>
