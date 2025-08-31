@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIQ Solutions - Integrated Quality & Intelligence Systems</title>
+    <title>IQMS - Integrated Quality Management Systems</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
@@ -127,11 +127,7 @@
         }
 
         .grid-2 { grid-template-columns: 1fr; }
-        .grid-3 { grid-template-columns: 1fr; }
-        @media(min-width: 760px) { 
-            .grid-2 { grid-template-columns: 1fr 1fr; }
-            .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
-        }
+        @media(min-width: 760px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
 
         /* Cards */
         .card {
@@ -141,9 +137,6 @@
             background: linear-gradient(180deg, rgba(12,28,42,.85), rgba(12,34,50,.85));
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
         }
 
         .card:hover {
@@ -161,7 +154,6 @@
             margin: 0;
             padding-left: 1.2rem;
             color: var(--text);
-            flex-grow: 1;
         }
 
         .card li {
@@ -180,7 +172,6 @@
             box-shadow: 0 2px 0 rgba(255,255,255,.07) inset;
             cursor: pointer;
             font-weight: 500;
-            text-align: center;
         }
 
         .button:hover { transform: translateY(-2px); }
@@ -224,60 +215,40 @@
             margin-bottom: 1rem;
         }
 
-        /* Service Cards */
-        .service-card {
+        /* Problem-Solution Cards */
+        .problem-solution {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin: var(--space-5) 0;
+        }
+
+        .solution-card {
             background: linear-gradient(135deg, rgba(12,28,42,.9), rgba(12,44,34,.7));
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: var(--radius);
             border: 1px solid var(--line);
             transition: all 0.3s ease;
             cursor: pointer;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: hidden;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--sky), var(--leaf), var(--sun));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card:hover {
+        .solution-card:hover {
             transform: translateY(-8px);
             border-color: var(--sun);
             box-shadow: 0 15px 40px rgba(255,216,107,.2);
         }
 
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--sun);
-        }
-
-        .service-title {
-            color: var(--sky);
-            font-size: 1.3rem;
+        .problem {
+            color: #ff9999;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
-        .service-description {
-            color: var(--muted);
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
+        .solution {
+            color: var(--leaf);
+            font-weight: 500;
+            font-size: 1.05rem;
         }
 
         /* Stats */
@@ -317,6 +288,120 @@
             color: var(--sky);
             font-size: 1rem;
             font-weight: 500;
+        }
+
+        /* Implementation Phases */
+        .phases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: var(--space-5) 0;
+        }
+
+        .phase-card {
+            background: linear-gradient(180deg, rgba(12,28,42,.9), rgba(12,34,50,.8));
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .phase-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--sun);
+            box-shadow: 0 20px 50px rgba(0,0,0,.4);
+        }
+
+        .phase-number {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--sun), var(--leaf));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-blue);
+            box-shadow: 0 4px 15px rgba(255,216,107,.3);
+        }
+
+        .phase-title {
+            color: var(--sky);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-duration {
+            color: var(--earth);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: linear-gradient(135deg, rgba(191,231,251,.08), rgba(12,44,34,.15));
+            padding: 3rem;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: var(--space-5) 0;
+            border: 1px solid var(--line);
+        }
+
+        .quote {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--leaf);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            color: var(--sun);
+            font-weight: 600;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: var(--space-4) 0;
+        }
+
+        .pricing-card {
+            background: linear-gradient(180deg, rgba(12,28,42,.85), rgba(12,34,50,.85));
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--sun);
+            transform: translateY(-5px);
+        }
+
+        .pricing-title {
+            color: var(--sky);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-amount {
+            color: var(--sun);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
 
         /* Animations */
@@ -363,29 +448,6 @@
             from { transform: translateX(0); opacity: 1; }
             to { transform: translateX(100%); opacity: 0; }
         }
-
-        /* Featured Section */
-        .featured-section {
-            background: linear-gradient(135deg, rgba(191,231,251,.08), rgba(12,44,34,.15));
-            padding: 3rem;
-            border-radius: var(--radius);
-            text-align: center;
-            margin: var(--space-5) 0;
-            border: 1px solid var(--line);
-        }
-
-        .featured-title {
-            font-family: var(--font-head);
-            font-size: 1.8rem;
-            color: var(--leaf);
-            margin-bottom: 1rem;
-        }
-
-        .featured-description {
-            color: var(--muted);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
     </style>
 </head>
 <body>
@@ -393,11 +455,12 @@
 
     <header>
         <div class="wrap nav">
-            <div class="brand">SIQ Solutions</div>
+            <div class="brand">IQMS</div>
             <nav class="menu">
                 <a href="#overview">Overview</a>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#phases">Implementation</a>
+                <a href="#results">Results</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -408,158 +471,192 @@
         <section class="hero fade-in">
             <div class="wrap grid grid-2" style="align-items: center;">
                 <div>
-                    <div class="eyebrow">Intelligence • Quality • Innovation</div>
-                    <h1>Unified Solutions for Modern Organizations</h1>
-                    <p class="muted">Discover our comprehensive suite of integrated services designed to transform your organization's approach to quality management, sustainability, and operational excellence.</p>
+                    <div class="eyebrow">Quality • Intelligence • Coherence</div>
+                    <h1>Don’t just comply. Stay ahead, protect your future, and move with confidence.</h1>
+                    <p class="muted">Integrated Quality Management Systems that unify QA, QC, and Knowledge Management into living architectures. Where ISO stops, intelligence begins.</p>
                     <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a class="button primary" href="#services">Explore Services</a>
-                        <a class="button secondary" href="#contact">Get Started</a>
+                        <a class="button primary" href="#contact">Start Your Transformation</a>
+                        <a class="button secondary" href="#solutions">Explore Solutions</a>
                     </div>
                 </div>
                 <div>
                     <div class="card">
-                        <h3>Why Choose SIQ Solutions?</h3>
+                        <h3>Beyond Traditional Quality</h3>
                         <ul>
-                            <li>Integrated approach across all services</li>
-                            <li>Proven methodologies and frameworks</li>
-                            <li>AI-enhanced tools and systems</li>
-                            <li>Cross-industry expertise</li>
-                            <li>Continuous innovation and adaptation</li>
+                            <li>Living systems that adapt and learn</li>
+                            <li>AI-enhanced monitoring and prediction</li>
+                            <li>Tacit knowledge capture and transfer</li>
+                            <li>Unified architecture across departments</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Overview -->
+        <!-- Value Proposition -->
         <section id="overview" class="section fade-in">
             <div class="wrap">
                 <div style="text-align: center; margin-bottom: var(--space-5);">
-                    <h2>Comprehensive Solutions for Every Challenge</h2>
-                    <p class="muted" style="font-size: 1.1rem;">From quality management to sustainability reporting, we provide end-to-end solutions that drive real results.</p>
+                    <h2>Transform Quality from Checkbox Compliance to Competitive Advantage</h2>
+                    <p class="muted" style="font-size: 1.1rem;">Most quality systems exist on paper but fail in practice. We build systems that actually work.</p>
                 </div>
                 
                 <div class="grid grid-2" style="margin-top: var(--space-5);">
                     <div class="card">
-                        <h3>Our Mission</h3>
-                        <p>To revolutionize how organizations approach quality, sustainability, and operational excellence through integrated, intelligent systems that adapt and evolve with your business needs.</p>
+                        <h3>Complete Service Integration</h3>
+                        <ul>
+                            <li>Diagnostic reviews of existing systems</li>
+                            <li>Full design and implementation roadmaps</li>
+                            <li>Integration of compliance frameworks with internal learning cycles</li>
+                            <li>Platform development support</li>
+                            <li>Dynamic architecture that adapts, learns, and maintains integrity</li>
+                        </ul>
                     </div>
                     <div class="card">
-                        <h3>Our Approach</h3>
-                        <p>We believe in creating living systems that go beyond static compliance to become dynamic tools for continuous improvement and competitive advantage.</p>
+                        <h3>Cross-Industry Applications</h3>
+                        <p class="muted">Our IQMS approach spans across all organizational levels and industry sectors:</p>
+                        <ul>
+                            <li>Sustainability Services</li>
+                            <li>Energy</li>
+                            <li>Technology</li>
+                            <li>Healthcare</li>
+                            <li>Construction</li>
+                            <li>Transportation</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services -->
-        <section id="services" class="section fade-in">
+        <!-- Problem-Solution Matrix -->
+        <section id="solutions" class="section fade-in">
             <div class="wrap">
-                <h2>Our Services</h2>
-                <div class="grid grid-3">
-                    <div class="service-card" onclick="window.location.href='IQMS.html'">
-                        <div class="service-icon">🏭</div>
-                        <h3 class="service-title">IQMS</h3>
-                        <p class="service-description">Integrated Quality Management Systems that unify QA, QC, and Knowledge Management into living architectures.</p>
-                        <a class="button primary" href="IQMS.html">Learn More</a>
+                <h2>Problem → Solution Matrix</h2>
+                <div class="problem-solution">
+                    <div class="solution-card">
+                        <div class="problem">Repeated audit non-compliances</div>
+                        <div class="solution">→ Living feedback loops that prevent recurrence</div>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">🌱</div>
-                        <h3 class="service-title">Sustainability Solutions</h3>
-                        <p class="service-description">Comprehensive ESG frameworks and sustainability reporting systems for modern organizations.</p>
-                        <a class="button secondary" href="#contact">Coming Soon</a>
+                    <div class="solution-card">
+                        <div class="problem">Knowledge loss during staff turnover</div>
+                        <div class="solution">→ Systematic tacit knowledge capture and transfer</div>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">🤖</div>
-                        <h3 class="service-title">AI Integration</h3>
-                        <p class="service-description">Intelligent automation and AI-enhanced tools to streamline operations and decision-making.</p>
-                        <a class="button secondary" href="#contact">Coming Soon</a>
+                    <div class="solution-card">
+                        <div class="problem">Fragmented quality initiatives</div>
+                        <div class="solution">→ Unified architecture across all departments</div>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">📊</div>
-                        <h3 class="service-title">Data Analytics</h3>
-                        <p class="service-description">Advanced analytics and reporting systems to transform data into actionable insights.</p>
-                        <a class="button secondary" href="#contact">Coming Soon</a>
+                    <div class="solution-card">
+                        <div class="problem">Manual, error-prone processes</div>
+                        <div class="solution">→ AI-enhanced quality monitoring and prediction</div>
                     </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">🔒</div>
-                        <h3 class="service-title">Compliance Management</h3>
-                        <p class="service-description">Streamlined compliance frameworks that adapt to changing regulations and standards.</p>
-                        <a class="button secondary" href="#contact">Coming Soon</a>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">🚀</div>
-                        <h3 class="service-title">Digital Transformation</h3>
-                        <p class="service-description">End-to-end digital transformation services to modernize your operations and processes.</p>
-                        <a class="button secondary" href="#contact">Coming Soon</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Service -->
-        <section class="section fade-in">
-            <div class="wrap">
-                <div class="featured-section">
-                    <h2 class="featured-title">Featured Service: IQMS</h2>
-                    <p class="featured-description">Our flagship Integrated Quality Management System is now available and ready to transform your organization's approach to quality.</p>
-                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                        <a class="button primary" href="IQMS.html">Explore IQMS</a>
-                        <a class="button secondary" href="#contact">Schedule Demo</a>
+                    <div class="solution-card">
+                        <div class="problem">Training programs that don't stick</div>
+                        <div class="solution">→ Integrated learning systems with real-time support</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Results -->
-        <section class="section fade-in" style="background: linear-gradient(180deg, rgba(191,231,251,.06), rgba(12,44,34,.15));">
+        <section id="results" class="section fade-in" style="background: linear-gradient(180deg, rgba(191,231,251,.06), rgba(12,44,34,.15));">
             <div class="wrap">
-                <h2>Proven Results Across Industries</h2>
+                <h2>Proven Results</h2>
                 <div class="stats-grid">
                     <div class="stat-card" onclick="animateCounter(this, 73, '%')">
                         <span class="stat-number">73%</span>
-                        <div class="stat-label">Reduction in Audit Findings</div>
+                        <div class="stat-label">Reduction in Repeat Audit Findings</div>
                     </div>
                     <div class="stat-card" onclick="animateCounter(this, 45, '%')">
                         <span class="stat-number">45%</span>
-                        <div class="stat-label">Faster Implementation</div>
+                        <div class="stat-label">Faster Onboarding for Quality Staff</div>
                     </div>
                     <div class="stat-card" onclick="animateCounter(this, 60, '%')">
                         <span class="stat-number">60%</span>
-                        <div class="stat-label">Improved Efficiency</div>
+                        <div class="stat-label">Cross-Departmental Coordination</div>
                     </div>
                     <div class="stat-card" onclick="animateCounter(this, 18, ' mo')">
                         <span class="stat-number">18 mo</span>
-                        <div class="stat-label">Average ROI Timeline</div>
+                        <div class="stat-label">Typical ROI Achievement</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About -->
-        <section id="about" class="section fade-in">
+        <!-- Implementation Phases -->
+        <section id="phases" class="section fade-in">
             <div class="wrap">
-                <h2>About SIQ Solutions</h2>
-                <div class="grid grid-2">
-                    <div class="card">
-                        <h3>Our Story</h3>
-                        <p>Founded on the principle that quality management should be intelligent, adaptive, and truly integrated, SIQ Solutions has been at the forefront of transforming how organizations approach operational excellence.</p>
-                        <p>We've evolved from traditional consulting to creating living systems that learn, adapt, and grow with your organization.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Our Values</h3>
+                <h2>Implementation Roadmap</h2>
+                <div class="phases">
+                    <div class="phase-card">
+                        <div class="phase-number">1</div>
+                        <h3 class="phase-title">Discovery & Assessment</h3>
+                        <div class="phase-duration">2-3 weeks</div>
                         <ul>
-                            <li><strong>Innovation:</strong> Constantly pushing boundaries in quality management</li>
-                            <li><strong>Integration:</strong> Creating unified, coherent systems</li>
-                            <li><strong>Intelligence:</strong> Leveraging AI and data for better decisions</li>
-                            <li><strong>Impact:</strong> Delivering measurable, lasting results</li>
+                            <li>Current system maturity evaluation</li>
+                            <li>Gap analysis against industry best practices</li>
+                            <li>Cultural and organizational readiness assessment</li>
+                            <li>Knowledge flow mapping</li>
+                            <li>Stakeholder interview protocol</li>
                         </ul>
                     </div>
+                    <div class="phase-card">
+                        <div class="phase-number">2</div>
+                        <h3 class="phase-title">Architecture Design</h3>
+                        <div class="phase-duration">2-4 weeks</div>
+                        <ul>
+                            <li>Custom IQMS framework development</li>
+                            <li>Process integration blueprints</li>
+                            <li>Knowledge management system design</li>
+                            <li>AI tool integration strategy</li>
+                            <li>Third-party verification alignment</li>
+                        </ul>
+                    </div>
+                    <div class="phase-card">
+                        <div class="phase-number">3</div>
+                        <h3 class="phase-title">Implementation Support</h3>
+                        <div class="phase-duration">3-12 months</div>
+                        <ul>
+                            <li>Phased rollout management</li>
+                            <li>Staff training and change management</li>
+                            <li>System testing and refinement</li>
+                            <li>Performance monitoring setup</li>
+                            <li>Continuous improvement protocols</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="section fade-in">
+            <div class="wrap">
+                <h2>Investment Structure</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="pricing-title">Discovery Phase</div>
+                        <div class="pricing-amount">$15K-25K</div>
+                        <p class="muted">Comprehensive assessment and roadmap development</p>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-title">Full Implementation</div>
+                        <div class="pricing-amount">$50K-200K</div>
+                        <p class="muted">Complete system design and deployment</p>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-title">Ongoing Support</div>
+                        <div class="pricing-amount">$5K-15K/mo</div>
+                        <p class="muted">Continuous optimization and evolution</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="section fade-in">
+            <div class="wrap">
+                <div class="quote-section">
+                    <div class="quote">"Before IQMS, our quality system was a filing cabinet. Now it's the nervous system of our entire operation."</div>
+                    <div class="quote-author">Manufacturing Director, Tier 2 Aerospace Supplier</div>
                 </div>
             </div>
         </section>
@@ -567,33 +664,34 @@
         <!-- Contact -->
         <section id="contact" class="section fade-in" style="background: linear-gradient(180deg, rgba(12,44,34,.15), var(--deep-blue));">
             <div class="wrap">
-                <h2>Ready to Transform Your Organization?</h2>
+                <h2>Ready to Build Coherent Quality Systems?</h2>
                 
+                <!-- Ideal Client Profile -->
                 <div class="card" style="margin-bottom: var(--space-4);">
-                    <h3>Let's Start the Conversation</h3>
-                    <p class="muted">Whether you're ready to implement a full solution or just want to learn more about our approach, we're here to help.</p>
+                    <h3>Is IQMS Right for Your Organization?</h3>
+                    <p class="muted">We work best with organizations that are ready for transformation:</p>
                     <div class="grid grid-2" style="margin-top: 1rem;">
                         <div>
-                            <h4 style="color: var(--sun); margin: 1rem 0 0.5rem;">Next Steps</h4>
+                            <h4 style="color: var(--sun); margin: 1rem 0 0.5rem;">Organizational Profile</h4>
                             <ul>
-                                <li>Schedule a discovery call</li>
-                                <li>Explore our IQMS solution</li>
-                                <li>Discuss your specific needs</li>
+                                <li>Organizations with 50-500 employees</li>
+                                <li>Companies facing recurring quality issues</li>
+                                <li>Firms preparing for major certifications</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 style="color: var(--leaf); margin: 1rem 0 0.5rem;">What to Expect</h4>
+                            <h4 style="color: var(--leaf); margin: 1rem 0 0.5rem;">Growth Indicators</h4>
                             <ul>
-                                <li>Personalized consultation</li>
-                                <li>Custom solution design</li>
-                                <li>Ongoing support and evolution</li>
+                                <li>Organizations experiencing rapid growth</li>
+                                <li>Companies with high staff turnover in technical roles</li>
+                                <li>Teams ready to move beyond checkbox compliance</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 
                 <div style="text-align: center;">
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--leaf);">Transform your organization's approach to quality, sustainability, and operational excellence.</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--leaf);">Transform your organization's approach to quality management with systems that actually work.</p>
                     <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                         <button class="button primary" onclick="showContactMessage()">Schedule Discovery Call</button>
                         <button class="button secondary" onclick="showServiceMessage()">Learn More About Services</button>
@@ -606,10 +704,10 @@
     <footer style="border-top: 1px solid var(--line); padding-block: 2rem; background: linear-gradient(180deg, var(--bg), var(--deep-blue));">
         <div class="wrap" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
             <div>
-                <strong style="color: var(--sky);">SIQ Solutions</strong>
-                <div class="muted">Intelligence • Quality • Innovation</div>
+                <strong style="color: var(--sky);">IQMS</strong>
+                <div class="muted">Integrated Quality Management Systems</div>
             </div>
-            <div class="muted">© <span id="year"></span> SIQ Solutions</div>
+            <div class="muted">© <span id="year"></span> IQMS Solutions</div>
         </div>
     </footer>
 
@@ -676,11 +774,11 @@
 
         // Show messages
         function showContactMessage() {
-            showNotification('Ready to transform your organization? Let\'s discuss how SIQ Solutions can help you achieve operational excellence and competitive advantage.');
+            showNotification('Ready to transform your quality systems? Let\'s discuss how IQMS can revolutionize your organization\'s approach to quality management.');
         }
 
         function showServiceMessage() {
-            showNotification('Our comprehensive service portfolio includes IQMS, sustainability solutions, AI integration, data analytics, compliance management, and digital transformation services.');
+            showNotification('IQMS transcends traditional ISO 9001 frameworks by creating living systems that integrate knowledge capture, AI-enhanced tools, and feedback loops.');
         }
 
         function showNotification(message) {
@@ -732,9 +830,9 @@
 
         window.addEventListener('scroll', handleScroll);
 
-        // Add interactive hover effects for service cards
+        // Add interactive hover effects for cards
         document.addEventListener('mousemove', (e) => {
-            const cards = document.querySelectorAll('.service-card');
+            const cards = document.querySelectorAll('.solution-card, .phase-card, .stat-card');
             cards.forEach(card => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
@@ -746,14 +844,14 @@
                     const rotateX = (y - centerY) / 20;
                     const rotateY = (centerX - x) / 20;
                     
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
                 }
             });
         });
 
         // Reset transforms when mouse leaves
         document.addEventListener('mouseleave', () => {
-            const cards = document.querySelectorAll('.service-card');
+            const cards = document.querySelectorAll('.solution-card, .phase-card, .stat-card');
             cards.forEach(card => {
                 card.style.transform = '';
             });
